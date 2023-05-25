@@ -111,7 +111,7 @@ mongosh
 ```
 use tweetsDB
 
-db.tweets.find().count
+db.tweets.find().count()
 ```
 
 Nếu thấy giá trị trên terminal bằng với giá trị output của file `data_to_mongo.py` thì là oke
