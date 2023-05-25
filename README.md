@@ -98,7 +98,7 @@ bin/kafka-topics.sh --describe --topic twitterstream --bootstrap-server localhos
 Mở thư mục code và thực hiện lệnh này
 
 ```
-python3 data_to_mongo
+python3 data_to_mongo.py
 ```
 
 Đợi chương trình chạy xong, sau đó mở terminal khác lên và chạy lệnh
@@ -139,7 +139,7 @@ spark-submit --packages org.apache.spark:spark-streaming-kafka-0-10_2.12:3.4.0,o
 
 ## Cần chỉnh sửa 
 
-Thay đổi hàm process trong file kafka_to_visualize để thực hiện phân tích
+Thay đổi hàm **process** trong file `kafka_to_visualize.py` để thực hiện phân tích và trục quan hóa
 
 Ở đây, mình có làm thử đếm số tweets trùng nhau và kết quả in ra trên console khá oke
 
