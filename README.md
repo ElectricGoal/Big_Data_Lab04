@@ -159,4 +159,6 @@ Giờ đến lượt mọi người làm sao để visualize nó :v
 
 ## Note
 
-Mỗi lệnh chạy sẽ in ra trên console rât nhiều dòng nhưng đó không phải lỗi mà là tính năng 
+Mỗi lệnh chạy sẽ in ra trên console rât nhiều dòng nhưng đó không phải lỗi mà là tính năng
+
+Ở lần chạy tiếp theo, chỉ cần dùng lệnh `sudo systemctl start mongod` để khỏi động mongoDB, không cần phải chạy file `data_to_mongo.py` nếu chưa có data trong collection tweets trong database tweetsDB.
