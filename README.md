@@ -59,6 +59,18 @@ Kiểm tra Spark có hoạt động chưa
 spark-submit --version
 ```
 
+Thêm các file jars
+
+```
+cd $SPARK_HOME/jars && wget https://repo1.maven.org/maven2/org/mongodb/spark/mongo-spark-connector_2.12/10.1.1/mongo-spark-connector_2.12-10.1.1.jar
+
+cd $SPARK_HOME/jars && wget https://repo1.maven.org/maven2/org/mongodb/mongodb-driver/3.12.13/mongodb-driver-3.12.13.jar
+
+cd $SPARK_HOME/jars && wget https://repo1.maven.org/maven2/org/mongodb/mongo-java-driver/3.12.13/mongo-java-driver-3.12.13.jar
+
+cd $SPARK_HOME/jars && wget https://repo1.maven.org/maven2/org/mongodb/bson/4.9.1/bson-4.9.1.jar
+```
+
 ## Cài đặt Kafka
 
 Tải Kafka tại link: https://downloads.apache.org/kafka/3.4.0/kafka_2.12-3.4.0.tgz
