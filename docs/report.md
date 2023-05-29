@@ -75,7 +75,7 @@ Run mongoDB in terminal:
 
 ### Step 3: Save tweets data to mongoDB by pymongo
 
-Run file `data_to_mongo.py` to save tweets data in mongoDB
+Run file [data_to_mongo.py](../data_to_mongo.py) to save tweets data in mongoDB
 
 ![Tweets to MongoDB](imgs/Tweets%20to%20mongoDB.png)
 
@@ -145,21 +145,21 @@ Open new terminal and run this command to create a topic of Kafka:
 
 - Lastly, We save tweets to kafka each 15 seconds with 10000 rows
 
-You can find source code in file `mongo_to_kafka.py` to see our step by step and get a deep understanding of how to write data to kafka.
+You can find source code in file [mongo_to_kafka.py](../mongo_to_kafka.py) to see our step by step and get a deep understanding of how to write data to kafka.
 
-Run file `mongo_to_kafka.py` by command:
+Run file [mongo_to_kafka.py](../mongo_to_kafka.py) by command:
 
     spark -submit --packages org.apache.spark:spark-streaming-kafka-0-12_2:3.4.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.0 mongo_to_kafka.py
 
 ### Step 4: Streaming data
 
-ou can find source code in file `kafka_to_visualize.py` to see our step by step and get a deep understanding of how to streaming data by spark.
+ou can find source code in file [kafka_to_visualize.py](../kafka_to_visualize.py) to see our step by step and get a deep understanding of how to streaming data by spark.
 
-Run file `kafka_to_visualize.py` by command:
+Run file [kafka_to_visualize.py](../kafka_to_visualize.py) by command:
 
     spark -submit --packages org.apache.spark:spark-streaming-kafka-0-12_2:3.4.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.0 kafka_to_visualize.py
 
-Command to run two file `kafka_to_visualize.py` and `kafka_to_visualize.py`:
+Command to run two file [mongo_to_kafka.py](../mongo_to_kafka.py) and [kafka_to_visualize.py](../kafka_to_visualize.py):
 
 ![Command to run](imgs/p1.png)
 
@@ -169,17 +169,25 @@ Results after running:
 
 ## Perform sentiment analysis on tweets
 
+The `sentiment(res_df)` function takes a DataFrame, performs text cleaning on the "Tweet" column, performs sentiment analysis, classifies the sentiments based on defined thresholds, and returns the updated DataFrame with sentiment labels and the original DataFrame for visualization purposes.
+
+Sets the positive and negative thresholds for sentiment classification. Tweets with a sentiment score greater than `positive_threshold = 0.2` are classified as "positive", and tweets with a sentiment score less than `negative_threshold = -0.2` are classified as "negative". Tweets within the threshold range are classified as "neutral".
+
 ## Visualize the analytic results
+
+The `visualize_batch()` function takes a batch DataFrame, performs sentiment analysis on it using the sentiment function, aggregates the sentiment values over time windows, creates a line plot of the average sentiment values, and saves the plot as an image file. This function can be used iteratively for each batch of data to visualize and save sentiment analysis results over time.
+
+Print out the average sentiment tweets over a period (in this case is 1 minute)
 
 ## References
 
 <!-- References without citing, this will be display as resources -->
 
-- Example: WordCount v1.0: https://hadoop.apache.org/docs/current/hadoop-mapreduce-client/hadoop-mapreduce-client-core/MapReduceTutorial.html#Example:_WordCount_v1.0
+- Install Spark: https://phoenixnap.com/kb/install-spark-on-ubuntu#:~:text=1%20Install%20Packages%20Required%20for%20Spark.%20Before%20downloading,resulting%20output%20looks%20similar%20to%20the%20previous%20one.
 
-- Reducer (Apache Hadoop Main 2.7.5 API): https://hadoop.apache.org/docs/r2.7.5/api/org/apache/hadoop/mapreduce/Reducer.html#cleanup-org.apache.hadoop.mapreduce.Reducer.Context-
+- Install Kafka: https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-20-04
 
-- Sriram Balasubramanian, Hadoop-MapReduce Lab, 2016
+- Consume kafka topic inside spark streaming: https://stackoverflow.com/questions/59236297/how-do-i-consume-kafka-topic-inside-spark-streaming-app
 
 <!-- References with citing, this will be display as footnotes -->
 
