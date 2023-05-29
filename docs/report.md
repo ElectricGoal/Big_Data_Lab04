@@ -14,7 +14,7 @@ classoption: oneside
 code-block-font-size: \scriptsize
 ---
 
-# Lab 02: MapReduce Programming
+# Lab 04: Streaming Data Processing with Spark
 
 ## List of team members
 
