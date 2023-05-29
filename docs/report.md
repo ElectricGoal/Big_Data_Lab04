@@ -183,11 +183,10 @@ Print out the average sentiment tweets over a period (in this case is 1 minute)
 
 <!-- References without citing, this will be display as resources -->
 
-- Install Spark: https://phoenixnap.com/kb/install-spark-on-ubuntu#:~:text=1%20Install%20Packages%20Required%20for%20Spark.%20Before%20downloading,resulting%20output%20looks%20similar%20to%20the%20previous%20one.
-
-- Install Kafka: https://www.digitalocean.com/community/tutorials/how-to-install-apache-kafka-on-ubuntu-20-04
-
-- Consume kafka topic inside spark streaming: https://stackoverflow.com/questions/59236297/how-do-i-consume-kafka-topic-inside-spark-streaming-app
+- https://spark.apache.org/docs/latest/structured-streaming-kafka-integration.html
+- https://kafka.apache.org/documentation/
+- https://sparkbyexamples.com/spark/spark-streaming-with-kafka/?utm_content=expand_article
+- https://matplotlib.org/stable/gallery/index.html
 
 <!-- References with citing, this will be display as footnotes -->
 
