@@ -146,7 +146,18 @@ Open new terminal and run this command to create a topic of Kafka:
     # verify
     bin/kafka-topics.sh --describe --topic twitterstream --bootstrap-server localhost:9092
 
-### Step 3: Write data from mongoDB to kafka
+### Step 3: Install some Python libraries
+
+Open terminal and install some libraries
+
+```
+pip install datasets
+pip install pymongo
+pip install textblob
+pip install findspark
+```
+
+### Step 4: Write data from mongoDB to kafka
 
 - Firstly, we convert all columns to a struct column.
 
@@ -160,7 +171,7 @@ Run file [mongo_to_kafka.py](../mongo_to_kafka.py) by command:
 
     spark -submit --packages org.apache.spark:spark-streaming-kafka-0-12_2:3.4.0,org.apache.spark:spark-sql-kafka-0-10_2.12:3.4.0 mongo_to_kafka.py
 
-### Step 4: Streaming data
+### Step 5: Streaming data
 
 ou can find source code in file [kafka_to_visualize.py](../kafka_to_visualize.py) to see our step by step and get a deep understanding of how to streaming data by spark.
 
