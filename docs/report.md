@@ -25,6 +25,15 @@ code-block-font-size: \scriptsize
 | 20120393 | Huynh Minh Tu      | 100%      |
 | 20120468 | Nguyen Van Hai     | 100%      |
 
+## Team's result
+
+| Section                                | Point |
+| -------------------------------------- | --------- |
+| Get Twitter tweets                     | 1.5      |
+| Stream tweets to Apache Spark          | 4      |
+| Perform sentiment analysis on tweets   | 2      |
+| Visualize the analytic results         | 2.5      |
+
 ## Team reflection
 
 **Does your journey to the deadline have any bugs? How have you overcome it?**
