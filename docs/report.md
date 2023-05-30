@@ -129,13 +129,13 @@ Rename to Kafka
 
 Open terminal and run:
 
-    cd /home/{uername}/Kafka
+    cd /home/{username}/Kafka
 
     bin/zookeeper-server-start.sh config/zookeeper.properties
 
 Open new terminal and run:
 
-    cd /home/{uername}/Kafka
+    cd /home/{username}/Kafka
 
     bin/zookeeper-server-start.sh config/zookeeper.properties
 
@@ -187,6 +187,20 @@ Sets the positive and negative thresholds for sentiment classification. Tweets w
 The `visualize_batch()` function takes a batch DataFrame, performs sentiment analysis on it using the sentiment function, aggregates the sentiment values over time windows, creates a line plot of the average sentiment values, and saves the plot as an image file. This function can be used iteratively for each batch of data to visualize and save sentiment analysis results over time.
 
 Print out the average sentiment tweets over a period (in this case is 1 minute)
+
+Results after running:
+
+![Batch 0](imgs/sentiment_analysis_0.png)
+
+![Batch 1](imgs/sentiment_analysis_1.png)
+
+![Batch 2](imgs/sentiment_analysis_2.png)
+
+![Batch 3](imgs/sentiment_analysis_3.png)
+
+![Batch 4](imgs/sentiment_analysis_4.png)
+
+![Batch 5](imgs/sentiment_analysis_4.png)
 
 ## References
 
